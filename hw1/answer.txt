@@ -1,0 +1,22 @@
+Q1.
+-在 Virtual Box 上安裝 ubuntu-16.04.3
+-於 ubuntu 上使用 firefox 瀏覽器下載 arm_cross_toolchain_linux64_20151023.tar.gz
+-在terminal命令列打上 $ tar zxvf arm_cross_toolchain_linux64_20151023.tar.gz 解壓縮
+-把解壓縮得到的 /foo 資料夾使用 $ mvdir /foo /home 移到家目錄
+-把 /foo/bin 添加到環境變量path:
+ 用 $ vim ~/.profile 編輯 .profile檔
+ 在檔案最後加上 export PATH="$PATH:/home/chinx2/foo/bin" //資料夾所在位置
+ 用 :wq 保存退出
+ 在terminal打上 $ source ~/.profile 重新加載 .profile檔
+ 用 $echo $PATH 確認是否新增成功
+ 完成後便能直接在命令列執行 /foo/bin 中的程式
+-照著作業指示在terminal上使用 $ arm-elf-gcc 和 $ arm-elf-as 編譯檔案
+
+Q2.
+-hw1.o是使用組合語言編寫的source file
+-hw1.exe是將hw1.o編譯打包成的執行檔
+
+Q3.
+-sample_O0.o 的檔案大小比 sample_O3.o 大
+-sample_O0.o : 776 byte
+-sample_O3.o : 692 byte
